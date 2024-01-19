@@ -2,7 +2,7 @@
 
 **Backend (Java Springboot):**
 
-![Generic Java Outline](ProjectOdyssey/java-outline.png)
+![Generic Java Outline](./java-outline.png)
 
 
 **Framework:** Spring Boot (for simplicity and rapid development)
