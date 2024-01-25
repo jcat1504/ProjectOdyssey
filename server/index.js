@@ -1,5 +1,3 @@
-import { Express } from "express";
-import axios from 'axios';
 
 const express = require("express");
 const app = express();
@@ -27,7 +25,7 @@ socketIO.on('connection',(socket) =>{
 
 app.get("/api", (req, res) => {
     res.json({
-        message: "Hello Kittens, testin testing",
+        message: "Hello Kittens",
     });
 });
 
