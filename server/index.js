@@ -10,8 +10,20 @@ app.use(express.json());
 
 const http = require("http").Server(app);
 const cors = require("cors");
-
+const socketIO = require('socket.io')(http, {
+    cors: {
+        origin: "http://localhost:3000"
+    }
+});
 app.use(cors());
+
+socketIO.on('connection',(socket) =>{
+    console.log(` ${socket.id} just connected`);
+    socket.on('disconnect', () => {
+        socket.disconnect()
+        console.log(' user disconnected');
+    });
+});
 
 app.get("/api", (req, res) => {
     res.json({
