@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import socketIO from 'socket.io-client';
 
 const socket = socketIO.connect("http://localhost:4000");
@@ -39,3 +39,4 @@ const Comments = () => {
 };
 
 export default Comments;
+
